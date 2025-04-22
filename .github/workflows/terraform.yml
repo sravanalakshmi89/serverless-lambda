@@ -64,7 +64,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-east-1
         run: |
-          terraform apply -auto-approve tfplan -var-file=terraform.tfvars
+          terraform apply -var-file=terraform.tfvars -auto-approve tfplan
         continue-on-error: false # Fail the workflow if this step fails
 
   
