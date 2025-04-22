@@ -53,3 +53,4 @@ module "SQS" {
   delay_seconds              = var.delay_seconds
   max_message_size           = var.max_message_size
 }
+
