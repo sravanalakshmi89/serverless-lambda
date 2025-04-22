@@ -53,7 +53,7 @@ jobs:
 
       - name: Manual Approval
         if: github.event_name == 'pull_request'
-        uses: hmarr/auto-approve-action@v2
+        uses: hmarr/auto-approve-action@v2.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
