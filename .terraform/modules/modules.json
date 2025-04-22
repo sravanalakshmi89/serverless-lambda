@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"SQS","Source":"./modules/sqs","Dir":"modules/sqs"},{"Key":"api_gateway","Source":"./modules/api_gateway","Dir":"modules/api_gateway"},{"Key":"lambda","Source":"./modules/lambda","Dir":"modules/lambda"},{"Key":"s3","Source":"./modules/s3","Dir":"modules/s3"}]}
