@@ -50,7 +50,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-east-1
         run: |
-          terraform plan -out=tfplan
+            terraform plan -var-file=terraform.tfvars -out=tfplan
 
       - name: Manual Approval
         if: github.event_name == 'pull_request'
@@ -65,7 +65,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-east-1
         run: |
-          terraform apply -auto-approve tfplan
+          terraform apply -auto-approve tfplan -var-file=terraform.tfvars
         continue-on-error: false # Fail the workflow if this step fails
 
   
