@@ -32,12 +32,17 @@ module "lambda" {
   memory_size               = var.lambda_memory_size
   timeout                   = var.lambda_timeout
   api_gateway_execution_arn = module.api_gateway.execution_arn
+
+  lambda_invoke_arn = module.api_gateway.lambda_invoke_arn
+  api_gateway_stage = var.api_gateway_stage
+
 }
 
 module "api_gateway" {
   source            = "./modules/api_gateway"
   api_gateway_name  = var.api_gateway_name
   api_gateway_stage = var.api_gateway_stage
+  #lambda_invoke_arn = module.lambda.lambda_invoke_arn
   #lambda_function_arn    = module.lambda.lambda_function_arn
   lambda_invoke_arn    = module.lambda.lambda_invoke_arn
   lambda_function_name = module.lambda.lambda_function_name

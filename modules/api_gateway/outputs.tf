@@ -17,3 +17,8 @@ output "execution_arn" {
   value       = aws_api_gateway_rest_api.greeting_api.execution_arn
   description = "The execution ARN of the API Gateway"
 }
+
+output "lambda_invoke_arn" {
+  value       = aws_api_gateway_integration.lambda_integration.uri
+  description = "The ARN used to invoke the Lambda function via API Gateway"
+}

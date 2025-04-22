@@ -46,3 +46,15 @@ variable "api_gateway_execution_arn" {
   description = "The execution ARN of the API Gateway"
   type        = string
 }
+
+variable "api_gateway_stage" {
+  description = "The stage name of the API Gateway"
+  type        = string
+  default     = "dev"
+
+}
+
+variable "lambda_invoke_arn" {
+  description = "The ARN of the Lambda function that is invoked by the API Gateway"
+  type        = string
+}
