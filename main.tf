@@ -17,6 +17,8 @@ module "s3" {
   source             = "./modules/s3"
   source_bucket_name = var.source_bucket_name
   target_bucket_name = var.target_bucket_name
+
+  remote_state_bucket_name = var.remote_state_bucket_name
 }
 
 module "lambda" {

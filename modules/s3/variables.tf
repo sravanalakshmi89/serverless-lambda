@@ -19,3 +19,11 @@ variable "bucket_acl" {
   type        = string
   default     = "private"
 }
+
+
+
+variable "remote_state_bucket_name" {
+  description = "The name of the S3 bucket for storing Terraform remote state"
+  type        = string
+
+}

@@ -101,3 +101,9 @@ variable "content_based_deduplication" {
   type        = bool
   default     = false
 }
+
+variable "remote_state_bucket_name" {
+  description = "The name of the S3 bucket for remote state storage"
+  type        = string
+
+}

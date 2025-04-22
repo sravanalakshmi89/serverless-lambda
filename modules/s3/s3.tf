@@ -12,3 +12,10 @@ resource "aws_s3_bucket" "target_bucket" {
 
 
 }
+
+resource "aws_s3_bucket" "remote_state_bucket_name" {
+  bucket = var.remote_state_bucket_name
+  #acl    = "private"
+
+}
+
